@@ -1,0 +1,13 @@
+Estrutura de repetição
+
+for(para)
+
+do While(enquanto)
+
+While(faça enquanto)
+
+Foreach(para cada)
+
+
+
+
