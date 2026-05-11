@@ -2,9 +2,9 @@ Estrutura de repetição
 
 for(para)
 
-do While(enquanto)
-
 While(faça enquanto)
+
+do While(enquanto)
 
 Foreach(para cada)
 
