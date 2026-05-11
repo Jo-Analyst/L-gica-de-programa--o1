@@ -1,3 +1,6 @@
+// Objetivo: demonstrar operadores de comparação e lógicos em Dart.
+// Conceitos: operadores (>=, &&), tipos (int/double/bool), expressão booleana.
+
 // Operadores aritméticos
 
 // + somar
@@ -10,11 +13,17 @@
 // ** potência
 
 void main() {
+  // Variável inteira.
   int idade = 18;
+
+  // Variável decimal (double).
   double altura = 1.75;
 
+  // Expressão com operadores de comparação (>=) e lógico (&&).
+  // Só será true se idade >= 18 E altura >= 1.7 ao mesmo tempo.
   bool situacao = idade >= 18 && altura >= 1.7;
 
+  // Mostra os valores no console.
   print('Idade: $idade');
   print('Altura: $altura');
   print('Situação: $situacao');

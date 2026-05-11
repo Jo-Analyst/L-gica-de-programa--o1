@@ -1,3 +1,6 @@
+// Objetivo: enunciado do desafio de frete por região.
+// Conceitos: switch, leitura do estado (sigla) e regras por caso.
+
 /* 
 Desafio: Calculadora de Frete por Região
 Crie um arquivo desafio.dart para resolver o problema.

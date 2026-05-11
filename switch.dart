@@ -1,9 +1,16 @@
+// Objetivo: escolher uma resposta com base em uma marca digitada.
+// Conceitos: leitura (stdin), switch/case, String.
+
 import 'dart:io';
 
 void main() {
+  // Pede para o usuário digitar uma marca de carro.
   print("Digite uma marca de carro: ");
+
+  // Lê a marca digitada (texto).
   String marcaCarro = stdin.readLineSync()!;
 
+  // switch: escolhe o case com base no valor de "marcaCarro".
   switch (marcaCarro) {
     case "vw":
       print("O melhor é GOL");
