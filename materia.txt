@@ -32,22 +32,51 @@ Falso - Verdadeiro => Verdadeiro
 Falso - Falso => Falso
 
 ----ESTRUTURAS DE CONTROLE----
-
---ESTRUTURAS CONDICIONAIS
-    - if else
-    - switch case
---ESTRUTURAS DE REPETIÇÃO--
-    - for
-    - while
-    - do while
+    --ESTRUTURAS CONDICIONAIS--
+        - if else -
+        - switch case -
+    --ESTRUTURAS DE REPETIÇÃO--
+        - for -
+        - while -
+        - do while -
 
 ----DEFINIÇÃO DE FUNÇÕES----
+    --FUNÇÕES--
+        - PARÂMETROS E ARGUMENTOS -
+            * Parâmetros opcionais *
+            * Parâmetros nomeados *
+        - RETORNO DE VALORES -
+        - FUNÇÕES ANÔNIMOS -
+        - FUNÇÕES RECURSIVAS -
 
---FUNÇÕES--
-    - PARÂMETROS E ARGUMENTOS
-        - Parâmetros opcionais
-        - Parâmetros nomeados
-    - RETORNO DE VALORES
-    - FUNÇÕES ANÔNIMOS
-    - FUNÇÕES RECURSIVAS
+    --ESCOPO--
+        - Variável Global -
+        - Variável Local -
  
+----COLEÇÕES----
+    --LISTAS--
+    --SETS--
+    --MAPAS--
+    --INTERAÇÃO SOBRE COLEÇÕES--
+    --MANIPULAÇÃO DE ELEMENTOS--
+        - Adicionar: add(), addAll() -
+        - Remover: remove(), clear() -
+        - Verificar existência: contains() - 
+        - Obter tamanho: length - 
+        - Ordenar: Sort()
+
+----ORIENTAÇÃO AO OBJETO----
+    --DEFINIÇÃO--
+    --CONCEITOS BÁSICOS
+        - Classes - 
+        - Objetos - 
+        - Atributos -
+        - Métodos -
+    --HERANÇA--
+    --POLIMORFISMO--
+    --ENCAPSULAMENTO--
+    --INTERFACE--
+
+----BIBLIOTECAS E PACOTES----
+    --IMPORTANDO BIBLIOTECAS--
+    -- UTILIZANDO PACOTES EXTERNOS--

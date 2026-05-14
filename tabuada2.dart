@@ -10,7 +10,7 @@ void main() {
   // Cabeçalho visual no console.
   print('\n' + '=' * 30);
   print("Gerador de tabuada");
-  print('\n' + '=' * 30);
+  print('=' * 30);
 
   // Pergunta o limite: até qual número (1..valor) o programa deve gerar as tabuadas.
   print('\n Até qual número você que ver a tabuada?');
