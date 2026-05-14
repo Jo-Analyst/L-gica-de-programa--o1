@@ -1,0 +1,53 @@
+Operadores aritmético
++ : Somar
+- : Subtrair
+/ : Dividir
+* : Multiplcar
+% : Módulo
+
+Operadores de comparação
+== :  Igual
+>  :  Maior
+>= :  Maior ou igual
+<  :  Menor
+<= :  Menor ou igual
+!= :  Diferente
+
+Operadores lógicos
+true(Verdadeiro) ou false(falso)
+&& : E
+|| : Ou
+! Negação
+
+OPERADOR E (&&)
+Verdadeiro - Verdadeiro => Verdadeiro
+Verdadeiro - Falso => Falso
+Falso - Verdadeiro => Falso
+Falso - Falso => Falso
+
+OPERADOR OU (||)
+Verdadeiro - Verdadeiro => Verdadeiro
+Verdadeiro - Falso => Verdadeiro
+Falso - Verdadeiro => Verdadeiro
+Falso - Falso => Falso
+
+----ESTRUTURAS DE CONTROLE----
+
+--ESTRUTURAS CONDICIONAIS
+    - if else
+    - switch case
+--ESTRUTURAS DE REPETIÇÃO--
+    - for
+    - while
+    - do while
+
+----DEFINIÇÃO DE FUNÇÕES----
+
+--FUNÇÕES--
+    - PARÂMETROS E ARGUMENTOS
+        - Parâmetros opcionais
+        - Parâmetros nomeados
+    - RETORNO DE VALORES
+    - FUNÇÕES ANÔNIMOS
+    - FUNÇÕES RECURSIVAS
+ 
