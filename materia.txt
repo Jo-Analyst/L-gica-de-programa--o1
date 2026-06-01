@@ -53,10 +53,10 @@
         - Variável Global -
         - Variável Local -
  
-----COLEÇÕES----
-    --LISTAS--
-    --SETS--
-    --MAPAS--
+=> ----COLEÇÕES----
+=>     --LISTAS--
+=>     --SETS--
+=>     --MAPAS--
     --INTERAÇÃO SOBRE COLEÇÕES--
     --MANIPULAÇÃO DE ELEMENTOS--
         - Adicionar: add(), addAll() -

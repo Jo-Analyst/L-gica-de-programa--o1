@@ -15,4 +15,10 @@ void main() {
 
   frutas.insert(1, 'limão');
   print(frutas);
+
+  print(frutas.contains('Maça'));
+  var teste = frutas
+      .where((teste) => teste.toLowerCase().contains('jabuticaba'))
+      .toList();
+  print(teste);
 }
