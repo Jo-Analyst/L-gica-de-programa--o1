@@ -57,13 +57,13 @@
 =>     --LISTAS--
 =>     --SETS--
 =>     --MAPAS--
-    --INTERAÇÃO SOBRE COLEÇÕES--
-    --MANIPULAÇÃO DE ELEMENTOS--
-        - Adicionar: add(), addAll() -
-        - Remover: remove(), clear() -
-        - Verificar existência: contains() - 
-        - Obter tamanho: length - 
-        - Ordenar: Sort()
+=>    --INTERAÇÃO SOBRE COLEÇÕES--
+=>    --MANIPULAÇÃO DE ELEMENTOS--
+=>        - Adicionar: add(), addAll() -
+=>        - Remover: remove(), clear() -
+=>        - Verificar existência: contains() - 
+=>        - Obter tamanho: length - 
+=>        - Ordenar: Sort()
 
 ----ORIENTAÇÃO AO OBJETO----
     --DEFINIÇÃO--

@@ -40,6 +40,7 @@ void main() {
       // Potência (usa pow do dart:math)
       print("O resultado da potência é: ${pow(numero1, numero2)}");
     case "7":
+    case "0":
       // Encerramento (observação: o menu menciona "0 para sair", mas aqui está "7").
       print("Programa encerrado");
       break;
