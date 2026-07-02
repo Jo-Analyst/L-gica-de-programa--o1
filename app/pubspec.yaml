@@ -1,0 +1,10 @@
+name: app
+description: Primeira aplicaçao
+version: 1.0.0
+
+environment: 
+  sdk: ^3.12.0
+
+dependencies:
+  uuid: ^4.5.3
+
