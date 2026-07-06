@@ -16,7 +16,7 @@ class MensageiroRepository {
 
         var dados = jsonDecode(conteudo);
 
-        if (dados == null || dados['mensageiro'] == null) return [];
+        if (dados == null || dados['mensagens'] == null) return [];
 
         List<dynamic> mensagens = dados['mensagens'];
 
