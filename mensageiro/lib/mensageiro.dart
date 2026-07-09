@@ -1,55 +1,33 @@
-import 'dart:convert';
 import 'dart:io';
 
 import 'package:mensageiro/mensageiro_repository.dart';
 
 void main() {
   mostrarCabecalho();
+  MensageiroRepository mensageiro = MensageiroRepository();
   bool continuar = true;
 
   while (continuar) {
-    monstrarMenuPrincipal();
-    stdout.write('\nDigite a sua opção: ');
-    String escolha = stdin.readLineSync(encoding: utf8)!;
-    MensageiroRepository mensageiroRepository = MensageiroRepository();
+    mostrarMenu();
+    String escolha = stdin.readLineSync()!;
     switch (escolha) {
-      case '1':
-        listarMensagem(mensageiroRepository);
       case '4':
         continuar = false;
-      default:
-        print('Opção inválida');
-    }
-
-    if (continuar) {
-      print('\nDigite o ENTER para continuar...');
-      stdin.readLineSync();
+      case '1':
+        print('Busca mensagem');
     }
   }
 }
 
-void listarMensagem(MensageiroRepository mensagemRepository) {
-  var mensagens = mensagemRepository.buscarTodasAsMensagens();
-  if (mensagens.isEmpty) {
-    print('Nenhuma mensagem cadastrada.');
-  } else {
-    mostrarCabecalho(mensagem: 'Mostrar Mensagem');
-    for (var mensagem in mensagens) {
-      print(
-        "ID: ${mensagem.id} | NOME: ${mensagem.texto} | CONTATO: ${mensagem.contato} ",
-      );
-      print('*' * 108);
-    }
-  }
-}
-
-void mostrarCabecalho({String mensagem = 'Sistema de Mensagens'}) {
-  print('\n${'*' * 45} ${mensagem.toUpperCase()} ${'*' * 45}\n');
-}
-
-void monstrarMenuPrincipal() {
-  print('1 - Listar Mensagem');
-  print('2 - Adicionar Mensagem');
-  print('3 - Remover Mensagem');
+void mostrarMenu() {
+  print('1 - Mostrar Mensagem');
+  print('2 - Enviar Mensagem');
+  print('3 - remover mensagem');
   print('4 - Sair');
+
+  stdout.write('Digite sua escolha: ');
+}
+
+void mostrarCabecalho({String mensagem = 'SISTEMA DE MENSAGENS'}) {
+  print('${'*' * 60} $mensagem ${'*' * 60}');
 }

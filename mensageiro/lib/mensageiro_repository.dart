@@ -23,7 +23,7 @@ class MensageiroRepository {
         return mensagens
             .map(
               (mensagem) => MensageiroModel(
-                id: Uuid().v4(),
+                id: mensagem['id'],
                 texto: mensagem['texto'],
                 contato: mensagem['contato'],
               ),
@@ -37,5 +37,27 @@ class MensageiroRepository {
       print('Erro ao buscar as mensagens $e');
       return [];
     }
+  }
+
+  void enviarMensagem({required String texto, required String contato}) {
+    var mensagens = buscarTodasAsMensagens();
+
+    mensagens.add(
+      MensageiroModel(id: Uuid().v4(), texto: texto, contato: contato),
+    );
+    _salvarMensagemNoArquivo(mensagens);
+  }
+
+  void _salvarMensagemNoArquivo(List<MensageiroModel> mensagens) {
+    var dados = {
+      'mensagens': mensagens
+          .map(
+            (msg) => {'id': msg.id, 'texto': msg.texto, 'contato': msg.contato},
+          )
+          .toList(),
+    };
+
+    var dadosFormatados = JsonEncoder.withIndent(' ');
+    _arquivo.writeAsStringSync(dadosFormatados.convert(dados));
   }
 }
