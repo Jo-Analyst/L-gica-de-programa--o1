@@ -14,8 +14,30 @@ void main() {
       case '4':
         continuar = false;
       case '1':
-        print('Busca mensagem');
+        buscarMensagem(mensageiro);
+      case '2':
+        enviarMensagem(mensageiro);
     }
+  }
+}
+
+void enviarMensagem(MensageiroRepository mensageiro) {
+  mostrarCabecalho(mensagem: 'ENVIAR MENSAGENS');
+  stdout.write('Digite sua mensagem: ');
+  String texto = stdin.readLineSync()!;
+  stdout.write('Digite o contato: ');
+  String contato = stdin.readLineSync()!;
+
+  mensageiro.enviarMensagem(texto: texto, contato: contato);
+  print('\nMensagem enviado com sucesso\n');
+}
+
+void buscarMensagem(MensageiroRepository mensageiro) {
+  mostrarCabecalho(mensagem: 'LISTA DE MENSAGENS');
+  var mensagens = mensageiro.buscarTodasAsMensagens();
+  for (var msg in mensagens) {
+    print('ID: ${msg.id} | Texto: ${msg.texto} | contato: ${msg.contato}');
+    print('*' * 125);
   }
 }
 
