@@ -1,7 +1,7 @@
 import 'dart:convert';
 import 'dart:io';
 
-import 'package:mensageiro/mensageiro_model.dart';
+import 'mensageiro_model.dart';
 import 'package:uuid/uuid.dart';
 
 class MensageiroRepository {
@@ -37,6 +37,19 @@ class MensageiroRepository {
       print('Erro ao buscar as mensagens $e');
       return [];
     }
+  }
+
+  bool excluirMensagem({required String id}) {
+    var mensagens = buscarTodasAsMensagens();
+
+    int quantidadeMensagens = mensagens.length;
+    mensagens.removeWhere((msg) => msg.id == id);
+    if (mensagens.length < quantidadeMensagens) {
+      _salvarMensagemNoArquivo(mensagens);
+      return true;
+    }
+
+    return false;
   }
 
   void enviarMensagem({required String texto, required String contato}) {
