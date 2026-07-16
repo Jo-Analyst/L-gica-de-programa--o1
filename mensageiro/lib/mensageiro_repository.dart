@@ -39,6 +39,20 @@ class MensageiroRepository {
     }
   }
 
+  bool excluirMensagem(String id) {
+    var mensagens = buscarTodasAsMensagens();
+    int quantidadeItens = mensagens.length;
+
+    mensagens.removeWhere((msg) => msg.id == id);
+
+    if (quantidadeItens > mensagens.length) {
+      _salvarMensagemNoArquivo(mensagens);
+      return true;
+    }
+
+    return false;
+  }
+
   void enviarMensagem({required String texto, required String contato}) {
     var mensagens = buscarTodasAsMensagens();
 

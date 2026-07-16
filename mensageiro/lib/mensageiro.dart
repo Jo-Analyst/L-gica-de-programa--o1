@@ -18,7 +18,7 @@ void main() {
       case '2':
         enviarMensagem(mensageiro);
       case '3':
-        print('Remover mensangem');
+        removerMensagem(mensageiro);
       default:
         print('Opção inválida');
     }
@@ -28,6 +28,21 @@ void main() {
       stdin.readLineSync();
     }
   }
+}
+
+void removerMensagem(MensageiroRepository mensageiro) {
+  stdout.write('\nDigite o ID para excluir: ');
+  String id = stdin.readLineSync()!;
+  bool mensagemExcluida = mensageiro.excluirMensagem(id);
+
+  if (!mensagemExcluida) {
+    print(
+      'Mensagem não foi encontrado. Verifique se o ID está correto! Tente novamente.',
+    );
+    return;
+  }
+
+  print('Mensagem excluido com sucesso.');
 }
 
 void enviarMensagem(MensageiroRepository mensageiro) {
@@ -42,9 +57,13 @@ void enviarMensagem(MensageiroRepository mensageiro) {
 void buscarTodasAsMensagens(MensageiroRepository mensageiro) {
   var mensagens = mensageiro.buscarTodasAsMensagens();
 
-  if (mensagens.isEmpty) return;
-
   mostrarCabecalho(mensagem: 'LISTA DE MENSAGENS');
+
+  if (mensagens.isEmpty) {
+    print('Nenhuma mensagem encontrada.');
+    return;
+  }
+
   for (var mensagem in mensagens) {
     print(
       'ID: ${mensagem.id} | Nome: ${mensagem.texto} | Contato: ${mensagem.contato}',
